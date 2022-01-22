@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>id</th>
+        <th>firstname</th>
+        <th>lastname</th>
+        <th>email</th>
+    </tr>
+    <tr>
+        <td><span th:text="${key.id}">id</span></td>
+        <td><span th:text ="${key.firstname}">firstname</span></td>
+        <td><span th:text ="${key.lastname}">lastName</span></td>
+        <td><span th:text ="${key.email}">email</span></td>
+        <td><a th:href="@{/users/edit/{id}(id=${key.id})}">Edit</a></td>
+        <td><a th:href="@{/users/delete/{id}(id=${key.id})}">Delete</a></td>
+    </tr>
+</table>
+</body>
+</html>
